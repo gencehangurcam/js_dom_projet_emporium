@@ -7,23 +7,139 @@
     <title>emperiumOfGenc</title>
     <link rel="stylesheet" href="./public/css/app.css">
 </head>
-<body>
+<body class="mt-5">
     <header>
+        <!-- NAV -->
         <nav>
-            <h1>emperium.</h1>
-            <div class="navbar">
-                <ul>
-                    <li>HOME</li>
-                    <li>PRODUCT</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+            <h1 class="text-center">emperium.</h1>
+            <ul class="nav justify-content-center mt-5">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">PRODUCT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ELEMENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONNEXION</a>
+                </li>
+            </ul>
         </nav>
+        <!-- inHEAD just after NAV -->
+        <div class="inHead mt-5">
+            <div class="shopAtEmporium">
+                <h1>Shop at</h1>
+                <img src="./public/img/logo.png" alt="logo">
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Ab, corporis?</p>
+                <button>decouvrir</button>
+            </div>
+            <img src="./public/img/slider-1.jpg" alt="photo_t-shirt">
+        </div>
     </header>
+    <!-- FIRST SECTION: 3 CATEGORY -->
+    <section class="container-fluid photos-items row mb-5">
+        <div class="contenair-genc col-sm-12 col-md-4 col-lg-4">
+            <img src="./public/img/service-1.jpg" alt="image">
+            <div class="texte_center">
+                <p>Living Room</p>
+                <hr>
+            </div>
+        </div>
+        <div class="contenair-genc col-sm-12 col-md-4 col-lg-4">
+            <img src="./public/img/service-2.jpg" alt="image">
+            <div class="texte_center">
+                <p>Sale items</p>
+                <hr>
+            </div>
+        </div>
+        <div class="contenair-genc col-sm-12 col-md-4 col-lg-4">
+            <img src="./public/img/./slider-3.jpg" alt="image">
+            <div class="texte_center">
+                <p>Clothes</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+    <!-- SECOND SECTION: RECENTS PRODUCTS (GALLERY 9 IMAGES) -->
+    <section class="recentProduct">
+        <div class="container ">
+            <h1 class="text-center mb-4">Recent Product</h1>        
+            <div class="gallery row">  
+                <div class="col-sm-12 col-md-4 col-lg-4">      
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-bag.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-bed.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-cups.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4  text-center price">800$</p>
+                    </div>   
+                </div> 
+                <div class="col-sm-12 col-md-4 col-lg-4">      
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-gloves.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-luxry-sofa.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-modern-sofa.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>    
+                </div>  
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-gloves.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-luxry-sofa.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>        
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-modern-sofa.jpg" alt="">
+                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>    
+                </div>       
+            </div>       
+        </div>
+    </section>
+    <!-- THIRD SECTION: DISCOVER-->
+    <section class="discover">
+        <div class="contenair-g">
+            <img src="./public/img/cta-bg.jpg" alt="image">
+            <div class="texte_center">
+                <p>Discover Thousands Of Great Products</p>
+                <button class="bg-danger">discover</button>
+            </div>
+        </div>
+    </section>
     <script src="./public/js/main.js"></script>
 </body>
 </html>
