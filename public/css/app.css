@@ -10,11 +10,17 @@
 
 .end {
   background-color: black;
-  color: white; }
+  color: white;
+  width: 100%; }
 
-header nav ul li a {
-  text-decoration: none !important;
-  color: black !important; }
+header nav {
+  z-index: 2 !important; }
+  @media screen and (max-width: 600px) {
+    header nav .prem {
+      display: none !important; } }
+  header nav .prem li a {
+    text-decoration: none !important;
+    color: black !important; }
 header .inHead {
   background-color: #f3f3f3;
   display: flex;
@@ -58,12 +64,106 @@ header .connexion a {
   background-color: #6c757d;
   padding: 5px 5px; }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .modal .modal-content {
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration); }
+    .modal .modal-content .modal-header {
+      background: var(--modal-color);
+      padding: 15px;
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+      .modal .modal-content .modal-header .close {
+        color: #ccc;
+        float: right;
+        font-size: 30px;
+        color: #fff; }
+      .modal .modal-content .modal-header h2, .modal .modal-content .modal-header .h2 {
+        margin: 0; }
+    .modal .modal-content .modal-body {
+      padding: 10px 20px;
+      background: #fff; }
+    .modal .modal-content .modal-footer {
+      background: var(--modal-color);
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin: 0; }
+
+.scrollTitle {
+  display: none; }
+
+.hautTitle {
+  display: block; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.closeIcon {
+  display: none; }
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem; }
+  .menu .menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white !important;
+    text-decoration: none; }
+    .menu .menuItem:hover {
+      text-decoration: underline; }
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer; }
+  @media screen and (min-width: 600px) {
+    .hamburger {
+      display: none !important; } }
+
+.showMenu {
+  transform: translateY(0); }
+
 .photos-items .contenair-g {
   position: relative;
   color: white;
   margin-top: 50px;
   cursor: pointer; }
   .photos-items .contenair-g img {
+    z-index: 1 !important;
     width: 100%; }
   .photos-items .contenair-g .texte_center {
     position: absolute;
@@ -73,18 +173,42 @@ header .connexion a {
     .photos-items .contenair-g .texte_center p {
       font-size: 20px; }
 
-.recentProduct .container .gallery .gallery-item .gallery-image {
+.recentProduct .container .gallery {
+  cursor: pointer; }
+  .recentProduct .container .gallery .gallery-item .gallery-image {
+    width: 100%; }
+  .recentProduct .container .gallery .gallery-item .price {
+    color: red; }
+
+.bloc {
+  position: relative;
   width: 100%; }
-.recentProduct .container .gallery .gallery-item .price {
-  color: red; }
+
+.blocAbso {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  left: 0; }
+
+.blocAbsoDeux {
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 50%; }
 
 .discover .contenair-g {
+  z-index: 1;
   position: relative;
   color: white;
   margin-top: 50px;
   cursor: pointer; }
   .discover .contenair-g img {
-    width: 100%; }
+    width: 100%;
+    position: fixed; }
   .discover .contenair-g .texte_center {
     position: absolute;
     top: 50%;
@@ -108,6 +232,15 @@ header .connexion a {
       width: 50px;
       padding: 5px; }
 
+.bgfixed {
+  background-image: url("../../public/img/cta-bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  width: 100%; }
+
 .hotFashion .container {
   width: 100%;
   display: flex;
@@ -117,7 +250,8 @@ header .connexion a {
     margin: 10px;
     cursor: pointer; }
     .hotFashion .container .box img {
-      width: 100%; }
+      width: 100%;
+      background-attachment: fixed; }
 .hotFashion .cercles {
   display: flex;
   justify-content: center;

@@ -1,6 +1,7 @@
 .discover
     // display: flex
     .contenair-g
+        z-index: 1
         position: relative
         color: white
         // margin: 10px
@@ -8,6 +9,7 @@
         cursor: pointer
         img
             width: 100%
+            position: fixed
         .texte_center 
             position: absolute
             top: 50%
@@ -29,3 +31,12 @@
                 font-size: 8px
                 width: 50px
                 padding: 5px
+.bgfixed
+    background-image: url("../../public/img/cta-bg.jpg")
+    background-position: top center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    height: 500px
+    width: 100%
+        

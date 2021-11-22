@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>emperium</title>
     <link rel="stylesheet" href="./public/css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="mt-5">
     <header>
         <!-- NAV -->
         <nav>
-            <h1 class="text-center">emperium.</h1>
-            <ul class="nav justify-content-center mt-5">
+            <h1 class="hautTitle text-center">emperium.</h1>
+            <ul class="prem nav justify-content-center">
+                <img class="scrollTitle" src="./public/img/logo.png" alt="logo">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">HOME</a>
+                    <a class="nav-link" href="#">HOME</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">PRODUCT</a>
+                    <a class="nav-link" href="#">PRODUCT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">BLOG</a>
@@ -38,8 +43,62 @@
                     <a class="nav-link" href="#">CONNEXION</a>
                 </li>
             </ul>
+            <ul class="menu">
+                <li><a class="menuItem" href="#">HOME</a></li>
+                <li><a class="menuItem" href="#">PRODUCT</a></li>
+                <li><a class="menuItem" href="#">BLOG</a></li>
+                <li><a class="menuItem" href="#">ELEMENTS</a></li>
+                <li><a class="menuItem" href="#">ABOUT</a></li>
+                <li><a class="menuItem" href="#">CONTACT</a></li>
+                <button class="menuItem button1"></button>
+                <button class="menuItem button2"></button>
+                <li class="connexion nav-item">
+                    <a class="menuItem nav-link" href="#">CONNEXION</a>
+                </li>
+            </ul>
+            <button class="hamburger">
+                <!-- material icons https://material.io/resources/icons/ -->
+                <i class="menuIcon material-icons">|||</i>
+                <i class="closeIcon material-icons">|||</i>
+            </button>
         </nav>
         <!-- modale -->
+        <div id="my-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="one">
+                        <img src="./public/img/logo.png" alt="logo">
+                        <button class="tr">X</button>
+                    </div>
+                    <div>
+                        <button>connexion</button>
+                        <button>inscription</button>
+                    </div>
+                    <div>
+                        <p>email adress</p>
+                        <input type="text">
+                        <p>well never share your email with anyone else</p>
+                        <p>password</p>
+                        <input type="text">
+                        <div>
+                            <div class="carre"></div>
+                            <p>check me out</p>
+                        </div>
+                        <button>connexion</button>
+                    </div>
+                    <div>
+                        icone
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </div>
         <!-- end modale -->
         <!-- inHEAD just after NAV -->
         <div class="inHead mt-5">
@@ -79,79 +138,83 @@
     <!-- SECOND SECTION: RECENTS PRODUCTS (GALLERY 9 IMAGES) -->
     <section class="recentProduct">
         <div class="container ">
-            <h1 class="text-center mb-4">Recent Product</h1>        
-            <div class="gallery row">  
-                <div class="col-sm-12 col-md-4 col-lg-4">      
+            <h1 class="text-center mb-4">Recent Product</h1>
+            <div class="gallery row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="gallery-item">
                         <img class="gallery-image" src="./public/img/product-bag.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mt-4 text-center">bag</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>        
+                    </div>
                     <div class="gallery-item">
                         <img class="gallery-image" src="./public/img/product-bed.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mt-4 text-center">bed</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>        
-                    <div class="gallery-item">
+                    </div>
+                    <div class="bloc gallery-item">
+                        <div class="blocAbso"></div>
+                        <div class="blocAbsoDeux"></div>
                         <img class="gallery-image" src="./public/img/product-cups.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
-                        <p class="mb-4  text-center price">800$</p>
-                    </div>   
-                </div> 
-                <div class="col-sm-12 col-md-4 col-lg-4">      
-                    <div class="gallery-item">
-                        <img class="gallery-image" src="./public/img/product-gloves.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                    </div>
+                    <div>
+                        <p class="mt-4 text-center">cups</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>        
-                    <div class="gallery-item">
-                        <img class="gallery-image" src="./public/img/product-luxry-sofa.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
-                        <p class="mb-4 text-center price">800$</p>
-                    </div>        
-                    <div class="gallery-item">
-                        <img class="gallery-image" src="./public/img/product-modern-sofa.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
-                        <p class="mb-4 text-center price">800$</p>
-                    </div>    
-                </div>  
+                    </div>
+                </div>
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="gallery-item">
                         <img class="gallery-image" src="./public/img/product-gloves.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mt-4 text-center">gloves</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>        
+                    </div>
                     <div class="gallery-item">
                         <img class="gallery-image" src="./public/img/product-luxry-sofa.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mt-4 text-center">luxury sofa</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>        
+                    </div>
                     <div class="gallery-item">
                         <img class="gallery-image" src="./public/img/product-modern-sofa.jpg" alt="">
-                        <p class="mt-4 text-center">clothes</p>
+                        <p class="mt-4 text-center">modern sofa</p>
                         <p class="mb-4 text-center price">800$</p>
-                    </div>    
-                </div>       
-            </div>       
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-plates.jpg" alt="">
+                        <p class="mt-4 text-center">plates</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-shoes.jpg" alt="">
+                        <p class="mt-4 text-center">shoes</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="gallery-image" src="./public/img/product-tshitr.jpg" alt="">
+                        <p class="mt-4 text-center">tshirt</p>
+                        <p class="mb-4 text-center price">800$</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- THIRD SECTION: DISCOVER-->
     <section class="discover">
         <div class="contenair-g mb-5">
-            <img src="./public/img/cta-bg.jpg" alt="image">
+            <div class="bgfixed"></div>
             <div class="texte_center">
                 <p>Discover Thousands Of Great Products</p>
                 <button class="bg-danger">discover</button>
             </div>
         </div>
     </section>
-     <!--  FOURTH SECTION: HOT FASHION-->
-     <section class="hotFashion">
+    <!--  FOURTH SECTION: HOT FASHION-->
+    <section class="hotFashion">
         <h3 class="text-center">Hot Fashion Products</h3>
         <div class="contBox container mt-5 mb-1">
             <!-- slider box -->
             <div class="box">
-                <img class="img" src="./public/img/product-shoes.jpg" alt="img-shoes">
+                <img class="img active" src="./public/img/product-shoes.jpg" alt="img-shoes">
             </div>
             <div class="box">
                 <img class="img" src="./public/img/product-bag.jpg" alt="img-bag">
@@ -176,19 +239,22 @@
             <div class="squareOne col-sm-12 col-md-4 col-lg-4">
                 <i class="fa-solid fa-circle-check"></i>
                 <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a laudantium quo.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a
+                    laudantium quo.</p>
                 <button>LEARN MORE</button>
             </div>
             <div class="squareTwo col-sm-12 col-md-4 col-lg-4">
                 <i class="fa-solid fa-paper-plane"></i>
                 <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a laudantium quo.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a
+                    laudantium quo.</p>
                 <button>LEARN MORE</button>
             </div>
             <div class="squareThree col-sm-12 col-md-4 col-lg-4">
                 <i class="fa-solid fa-circle-check"></i>
                 <h3>Lorem ipsum dolor sit amet.</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a laudantium quo.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime corrupti possimus commodi a
+                    laudantium quo.</p>
                 <button>LEARN MORE</button>
             </div>
         </div>
@@ -221,10 +287,11 @@
                 </div>
             </div>
         </div>
-        <div class="end text-center p-3">
+        <div class="container-fluid end text-center p-3">
             <p>copyright 2021 googplayers</p>
         </div>
     </footer>
     <script src="./public/js/main.js"></script>
 </body>
+
 </html>
