@@ -14,7 +14,7 @@
   width: 100%; }
 
 header nav {
-  z-index: 2 !important; }
+  z-index: 100 !important; }
   @media screen and (max-width: 600px) {
     header nav .prem {
       display: none !important; } }
@@ -96,14 +96,31 @@ header .connexion a {
     .modal .modal-content .modal-body {
       padding: 10px 20px;
       background: #fff; }
+      .modal .modal-content .modal-body .one {
+        display: flex; }
+        .modal .modal-content .modal-body .one img {
+          flex: 2; }
+        .modal .modal-content .modal-body .one .btn {
+          flex: 1; }
+      .modal .modal-content .modal-body .two {
+        display: flex; }
+        .modal .modal-content .modal-body .two .btn1 {
+          width: 100%;
+          flex: 2;
+          margin: 5px; }
+        .modal .modal-content .modal-body .two .btn2 {
+          width: 100%;
+          flex: 1;
+          margin: 5px; }
     .modal .modal-content .modal-footer {
       background: var(--modal-color);
       padding: 10px;
       color: #fff;
       text-align: center;
       border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-      margin: 0; }
+      border-bottom-right-radius: 5px; }
+      .modal .modal-content .modal-footer h3, .modal .modal-content .modal-footer .h3 {
+        margin: 0; }
 
 .scrollTitle {
   display: none; }
@@ -161,10 +178,14 @@ header .connexion a {
   position: relative;
   color: white;
   margin-top: 50px;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: hidden; }
   .photos-items .contenair-g img {
     z-index: 1 !important;
-    width: 100%; }
+    width: 100%;
+    transition: transform 0.3s; }
+    .photos-items .contenair-g img:hover {
+      transform: scale(1.1); }
   .photos-items .contenair-g .texte_center {
     position: absolute;
     top: 50%;

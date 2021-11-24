@@ -1,6 +1,6 @@
 header
     nav
-        z-index: 2 !important
+        z-index: 100 !important
         .prem
             @media screen and (max-width: 600px) 
                 display: none !important
@@ -89,6 +89,22 @@ header
         .modal-body 
             padding: 10px 20px
             background: #fff
+            .one
+                display: flex
+                img
+                    flex: 2
+                .btn
+                    flex: 1
+            .two
+                display: flex
+                .btn1
+                    width: 100%
+                    flex: 2
+                    margin: 5px
+                .btn2
+                    width: 100%
+                    flex: 1
+                    margin: 5px
         .modal-footer
             background: var(--modal-color)
             padding: 10px
@@ -96,8 +112,8 @@ header
             text-align: center
             border-bottom-left-radius: 5px
             border-bottom-right-radius: 5px
-            h3 
-            margin: 0
+            h3
+                margin: 0
 
 .scrollTitle
     display: none
@@ -149,6 +165,3 @@ header
 
 .showMenu 
     transform: translateY(0)
-
-
-body

@@ -41,6 +41,7 @@ window.addEventListener('scroll', () => {
       nav.style.color = "white"
       nav.style.index = "1"
       nav.style.width = "100%"
+      nav.style.zIndex = "100"
       // nav.style.position = "relative"
     } else if(window.scrollY < 83){
       title.style.display = "none"
@@ -103,3 +104,15 @@ button2.addEventListener('click', () => {
   body.style.color = "white"
   prem.style.color = "white !important"
 })
+
+
+// recent product
+
+let bloc = document.querySelector("anim")
+
+bloc.addEventListener("mouseover", () =>{
+  bloc.style.display = "none"
+  console.log(bloc);
+})
+
+console.log(bloc);
